@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "b75e422a-0c90-4db9-bced-4ae942a8e40a")
 	(paper "A4")
+	(title_block
+		(title "The Eye of Seeron")
+		(date "2024-09-20")
+		(rev "1v1")
+		(company "accelerando.com.au")
+		(comment 1 "Ring light for 25.4mm loupe")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers hide)
@@ -530,6 +537,12 @@
 		(uuid "653f5630-ad61-4680-9f59-f59740843e15")
 	)
 	(junction
+		(at 180.34 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "66159157-d1f3-47ec-82a5-b4ba14714859")
+	)
+	(junction
 		(at 189.23 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -548,10 +561,22 @@
 		(uuid "6be98877-41b4-4af7-93b1-750020bb1156")
 	)
 	(junction
+		(at 172.72 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7099ae64-b095-452d-b4c5-a90658973fdc")
+	)
+	(junction
 		(at 173.99 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "736c4fd7-d8e7-44da-a70a-800eb155695f")
+	)
+	(junction
+		(at 143.51 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c7110f5-4061-444d-9784-6fff890346f7")
 	)
 	(junction
 		(at 161.29 87.63)
@@ -744,6 +769,16 @@
 			(type default)
 		)
 		(uuid "380b4f4c-400c-4a1b-bd0a-abdb3d427bd9")
+	)
+	(wire
+		(pts
+			(xy 189.23 114.3) (xy 189.23 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39dc1ddc-0200-41f0-943c-d1567ade580f")
 	)
 	(wire
 		(pts
@@ -947,7 +982,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 105.41) (xy 189.23 105.41)
+			(xy 172.72 105.41) (xy 180.34 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1027,7 +1062,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 105.41) (xy 163.83 105.41)
+			(xy 143.51 105.41) (xy 153.67 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1074,6 +1109,26 @@
 			(type default)
 		)
 		(uuid "d03c3df8-75a6-4635-9061-a9e9a56a5cea")
+	)
+	(wire
+		(pts
+			(xy 147.32 58.42) (xy 147.32 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9371822-1eee-4aaa-afc1-17c078d8f841")
+	)
+	(wire
+		(pts
+			(xy 180.34 105.41) (xy 189.23 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da479bf8-bef5-4ca2-b398-1de090642f01")
 	)
 	(wire
 		(pts
@@ -1186,7 +1241,7 @@
 		(uuid "fdc65a71-ac8e-4b7f-bac4-2b0307cfbe09")
 	)
 	(label "+3V3"
-		(at 160.02 105.41 0)
+		(at 153.67 105.41 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1195,6 +1250,73 @@
 			(justify left bottom)
 		)
 		(uuid "c9005669-d66d-4cee-a3fa-b04cc0638461")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 172.72 105.41 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07a3feb5-f8f8-442e-9f18-5575956a0113")
+		(property "Reference" "TP3"
+			(at 175.26 107.4419 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "GND"
+			(at 175.26 109.9819 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 167.64 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 167.64 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 172.72 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c7c14cb1-4fb8-4003-9058-f5f30a7a01d6")
+		)
+		(instances
+			(project "seeron"
+				(path "/b75e422a-0c90-4db9-bced-4ae942a8e40a"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:LED")
@@ -1334,7 +1456,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 163.83 105.41 180)
+		(at 143.51 105.41 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1343,7 +1465,7 @@
 		(fields_autoplaced yes)
 		(uuid "29c61c02-ccaa-49f3-a661-1030fa0a545b")
 		(property "Reference" "TP1"
-			(at 166.37 107.4419 0)
+			(at 146.05 107.4419 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1351,8 +1473,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 166.37 109.9819 0)
+		(property "Value" "3v3"
+			(at 146.05 109.9819 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1361,7 +1483,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 158.75 105.41 0)
+			(at 138.43 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1370,7 +1492,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 158.75 105.41 0)
+			(at 138.43 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1379,7 +1501,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 163.83 105.41 0)
+			(at 143.51 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1672,8 +1794,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 153.67 105.41 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "84677c57-24c3-4e2a-a4e2-b3d2638c23ba")
+		(property "Reference" "TP2"
+			(at 156.21 107.4419 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "3v3"
+			(at 156.21 109.9819 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 148.59 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 153.67 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a26d871-4970-41f9-a6d3-b0d9e4727549")
+		)
+		(instances
+			(project "seeron"
+				(path "/b75e422a-0c90-4db9-bced-4ae942a8e40a"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 189.23 105.41 0)
+		(at 189.23 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1682,7 +1870,7 @@
 		(fields_autoplaced yes)
 		(uuid "8908a50d-1030-429d-bc76-b6d64bf9c455")
 		(property "Reference" "#PWR01"
-			(at 189.23 111.76 0)
+			(at 189.23 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1691,7 +1879,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 189.23 110.49 0)
+			(at 189.23 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1699,7 +1887,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 105.41 0)
+			(at 189.23 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1708,7 +1896,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 189.23 105.41 0)
+			(at 189.23 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1717,7 +1905,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 189.23 105.41 0)
+			(at 189.23 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1875,7 +2063,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 147.32 66.04 0)
+		(at 147.32 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1884,7 +2072,7 @@
 		(fields_autoplaced yes)
 		(uuid "b5616dc6-af2d-4f4b-b098-a9e321c9f379")
 		(property "Reference" "#PWR02"
-			(at 147.32 69.85 0)
+			(at 147.32 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1893,7 +2081,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 147.32 60.96 0)
+			(at 147.32 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1901,7 +2089,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 66.04 0)
+			(at 147.32 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1910,7 +2098,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 66.04 0)
+			(at 147.32 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1919,7 +2107,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 147.32 66.04 0)
+			(at 147.32 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1934,6 +2122,73 @@
 			(project ""
 				(path "/b75e422a-0c90-4db9-bced-4ae942a8e40a"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 180.34 105.41 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd620c00-dccb-461f-a9c8-4d426a98692b")
+		(property "Reference" "TP4"
+			(at 182.88 107.4419 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "GND"
+			(at 182.88 109.9819 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 175.26 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 175.26 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 180.34 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0acce0c-9b43-49e9-b9cd-3e10bdc0f47b")
+		)
+		(instances
+			(project "seeron"
+				(path "/b75e422a-0c90-4db9-bced-4ae942a8e40a"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
